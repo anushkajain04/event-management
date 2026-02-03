@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Profile Registration Form</h2>
+
+    <form action="submit.php" method="post" onsubmit="return validateForm()">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="school">School:</label>
+        <input type="text" name="school" id="school" required>
+
+        <label for="course">Course:</label>
+        <input type="text" name="course" id="course" required>
+
+        <label for="centre">Centre:</label>
+        <input type="text" name="centre" id="centre" required>
+
+        <label for="contact">Contact No:</label>
+        <input type="text" name="contact" id="contact" placeholder="10-digit number" required>
+
+        <label for="party_status">Are you in any party?</label>
+        <select name="party_status" id="party_status" onchange="toggleParty()" required>
+            <option value="">--Select--</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+        <div id="partyAffiliationDiv" style="display:none;">
+            <label for="party_affiliation">Party Affiliation:</label>
+            <select name="party_affiliation" id="party_affiliation">
+                <option value="">--Select Party--</option>
+                <option value="ABVP">ABVP</option>
+                <option value="AISA">AISA</option>
+                <option value="BAPSA">BAPSA</option>
+                <option value="DSF">DSF</option>
+                <option value="NSUI">NSUI</option>
+                <option value="PSA">PSA</option>
+                <option value="SFI">SFI</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit Profile">
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

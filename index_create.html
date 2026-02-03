@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="style_create.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create New Event</h2>
+        <form action="submit_event.php" method="POST" enctype="multipart/form-data" id="eventForm">
+            
+            <label>Event Poster/Template</label>
+            <input type="file" name="poster" accept="image/*" required>
+
+            <label>Event Name</label>
+            <input type="text" name="event_name" required>
+
+            <div class="row">
+                <div class="col">
+                    <label>Date</label>
+                    <input type="date" name="event_date" required>
+                </div>
+                <div class="col">
+                    <label>Time</label>
+                    <input type="time" name="event_time" required>
+                </div>
+            </div>
+
+            <label>Venue</label>
+            <input type="text" name="venue" required>
+            <label for="category">Event Category</label>
+            <select name="category" id="category" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Visits">Visits</option>
+                <option value="Cultural fest">Cultural Fest</option>
+                <option value="Sports">Sports</option>
+                <option value="Shows">Shows</option>
+                  <option value="Protest">Protest</option>
+                <option value="Sessions">Sessions</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label>About the Event</label>
+            <textarea name="about_event" rows="4"></textarea>
+
+            <label>Organised BY </label>
+            <input type="text" name="organization" required>
+
+            <label>Any Guest Attending?</label>
+            <select name="has_guest" id="has_guest" onchange="toggleGuest()">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <div id="guest_fields" class="hidden">
+                <input type="text" name="guest_name" placeholder="Guest Name">
+                <input type="text" name="guest_designation" placeholder="Guest Designation">
+            </div>
+
+            <label>Registration Link?</label>
+            <select name="has_reg_link" id="has_reg_link" onchange="toggleLink()">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <div id="link_field" class="hidden">
+                <input type="url" name="reg_link" placeholder="https://example.com">
+            </div>
+
+            <label>Contact Phone</label>
+            <input type="tel" name="phone">
+
+            <label>Social Media Link</label>
+            <input type="url" name="social_link">
+
+            <button type="submit">Publish Event</button>
+        </form>
+    </div>
+    <script src="script_create.js"></script>
+</body>
+</html>

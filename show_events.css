@@ -1,0 +1,62 @@
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
+}
+
+.event-card {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 12px;
+}
+
+.event-actions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.event-actions button {
+    border: none;
+    background: #053052;
+    color: #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+#modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: white;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#modalOverlay.hidden {
+    display: none;
+}
+
+#modalBox {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 420px;
+}
