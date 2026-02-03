@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(5, 48, 82);
+}
+.nav img{
+    width: 30px;
+    height: 30px;
+    margin: 12px 0px 0px 20px;
+    padding: 0px 45px;
+}
+
+.category-heading {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 45px;
+    font-weight: bold;
+    color:  rgb(5, 48, 82);
+}
+
+/* Grid container */
+.category-container {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+
+}
+.category-container a{
+    text-decoration: none;
+    color:black
+}
+/* Category card */
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+/* === EVENT CARD FIX (CATEGORY PAGE) === */
+
+.event-card {
+    background: #fff;
+    border: 1px solid #000;   /* matches what you see */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-info {
+    padding: 12px;
+    color: #000;
+}
+
+.event-info h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.event-info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+/* ================= CATEGORY EVENT CARDS ================= */
+
+.events-grid {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: #f0f0f0;
+}
+
+.event-info {
+    padding: 15px;
+}
+
+.event-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: rgb(5,48,82);
+}
+
+.event-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+

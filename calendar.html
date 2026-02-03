@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Calendar</title>
+<link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <div class="nav">
+            <a href="jnu_event1.html" class="home">
+                        <span>
+                            <img src="Icons/left-arrow.png" alt="Home">
+                        </span>
+                    </a>
+           
+    </div>
+
+<div id="content">
+<div class="calendar-container">
+
+ <h3 class="cal-heading">Calendar</h3>
+
+    <!-- Calendar Header -->
+    <div class="calendar-header">
+        <button id="prevYear">«</button>
+        <button id="prevMonth">‹</button>
+
+        <h2 id="monthYear"></h2>
+
+        <button id="nextMonth">›</button>
+        <button id="nextYear">»</button>
+    </div>
+
+    <!-- Calendar Body -->
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+    </table>
+
+</div>
+<div id="poster">
+     <h2 class="event-heading">Events on <span id="selectedDate"></span></h2>
+
+     <div class="event-grid" id="eventGrid"></div>
+</div>
+</div>
+
+<script src="calendar.js"></script>
+
+</body>
+</html>
